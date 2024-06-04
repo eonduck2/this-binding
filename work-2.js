@@ -5,7 +5,11 @@ class WorkTwo {
   }
 
   set a(value) {
-    this._a = value;
+    if (!isNaN(value)) {
+      this._a = value;
+    } else {
+      throw new Error(`타입 에러`);
+    }
   }
 
   get a() {
