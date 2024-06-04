@@ -1,9 +1,9 @@
 const workOne = (a, b) => {
-  if (!isNaN(a)) {
-    if (!isNaN(b)) {
-      const local = a + b;
+  if (!isNaN(a) && !isNaN(b)) {
+    const local = a + b;
 
-      return local;
-    }
+    return local;
+  } else {
+    throw new Error(`타입 에러`);
   }
 };
