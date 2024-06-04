@@ -1,3 +1,3 @@
 class WorkTwo {
-  constructor() {}
+  constructor(a, b) {}
 }
