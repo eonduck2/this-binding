@@ -1,5 +1,9 @@
 const workOne = (a, b) => {
-  const local = a + b;
+  if (!isNaN(a)) {
+    if (!isNaN(b)) {
+      const local = a + b;
 
-  return local;
+      return local;
+    }
+  }
 };
