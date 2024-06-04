@@ -10,10 +10,11 @@ const proxiedObj = new Proxy(ramen, {
       return `신라면`;
     }
     return Reflect.get(...arguments);
+    // return `테스트`;
   },
 });
 
 console.log(proxiedObj.ramen);
-console.log(proxiedObj.egg);
 console.log(proxiedObj.water);
+console.log(proxiedObj.egg);
 console.log(proxiedObj);
