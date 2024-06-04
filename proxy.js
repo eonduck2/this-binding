@@ -7,11 +7,13 @@ const ramen = {
 const proxiedObj = new Proxy(ramen, {
   get(target, prop, receiver) {
     if (prop === `ramen`) {
-      Reflect.set(ramen,prop,value,receiver){
-      };
       return `신라면`;
     }
+    return Reflect.get(...arguments);
   },
 });
 
 console.log(proxiedObj.ramen);
+console.log(proxiedObj.egg);
+console.log(proxiedObj.water);
+console.log(proxiedObj);
